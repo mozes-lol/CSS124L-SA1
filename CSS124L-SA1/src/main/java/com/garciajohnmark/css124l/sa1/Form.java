@@ -28,6 +28,26 @@ public class Form extends javax.swing.JFrame {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
+        panel_main = new javax.swing.JPanel();
+        panel_enterAssignmentDetails = new javax.swing.JPanel();
+        jPanel4 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jPanel2 = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTextArea2 = new javax.swing.JTextArea();
+        jPanel1 = new javax.swing.JPanel();
+        jPanel3 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        jComboBox1 = new javax.swing.JComboBox<>();
+        jPanel5 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        jTextField2 = new javax.swing.JTextField();
+        jPanel7 = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
+        panel_assignmentList = new javax.swing.JPanel();
+        scrollPane_assignmentField = new javax.swing.JScrollPane();
+        textArea_assignmentField = new javax.swing.JTextArea();
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
@@ -35,15 +55,94 @@ public class Form extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        panel_main.setLayout(new java.awt.GridLayout(1, 2));
+
+        panel_enterAssignmentDetails.setBorder(javax.swing.BorderFactory.createTitledBorder("Assignment Details"));
+        panel_enterAssignmentDetails.setLayout(new java.awt.BorderLayout());
+
+        jPanel4.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
+
+        jLabel1.setText("Title");
+        jPanel4.add(jLabel1);
+
+        jTextField1.setColumns(17);
+        jTextField1.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        jTextField1.setToolTipText("");
+        jPanel4.add(jTextField1);
+
+        panel_enterAssignmentDetails.add(jPanel4, java.awt.BorderLayout.PAGE_START);
+
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Description"));
+        jPanel2.setLayout(new java.awt.BorderLayout());
+
+        jTextArea2.setColumns(20);
+        jTextArea2.setRows(5);
+        jScrollPane2.setViewportView(jTextArea2);
+
+        jPanel2.add(jScrollPane2, java.awt.BorderLayout.CENTER);
+
+        panel_enterAssignmentDetails.add(jPanel2, java.awt.BorderLayout.CENTER);
+
+        jPanel1.setLayout(new java.awt.GridLayout(3, 1));
+
+        jPanel3.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
+
+        jLabel2.setText("Department");
+        jPanel3.add(jLabel2);
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Human Resources", "Research and Development", "Management", "Designers", "Information Technology" }));
+        jPanel3.add(jComboBox1);
+
+        jPanel1.add(jPanel3);
+
+        jPanel5.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
+
+        jLabel3.setText("Deadline");
+        jPanel5.add(jLabel3);
+
+        jTextField2.setColumns(10);
+        jPanel5.add(jTextField2);
+
+        jPanel1.add(jPanel5);
+
+        jPanel7.setLayout(new java.awt.BorderLayout());
+
+        jButton1.setText("Create Assignment");
+        jButton1.setEnabled(false);
+        jPanel7.add(jButton1, java.awt.BorderLayout.PAGE_START);
+
+        jPanel1.add(jPanel7);
+
+        panel_enterAssignmentDetails.add(jPanel1, java.awt.BorderLayout.PAGE_END);
+
+        panel_main.add(panel_enterAssignmentDetails);
+
+        panel_assignmentList.setLayout(new java.awt.BorderLayout());
+
+        textArea_assignmentField.setColumns(20);
+        textArea_assignmentField.setRows(5);
+        textArea_assignmentField.setEnabled(false);
+        scrollPane_assignmentField.setViewportView(textArea_assignmentField);
+
+        panel_assignmentList.add(scrollPane_assignmentField, java.awt.BorderLayout.CENTER);
+
+        panel_main.add(panel_assignmentList);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 515, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(panel_main, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 395, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(panel_main, javax.swing.GroupLayout.DEFAULT_SIZE, 365, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();
@@ -85,7 +184,27 @@ public class Form extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel7;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextArea jTextArea2;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JPanel panel_assignmentList;
+    private javax.swing.JPanel panel_enterAssignmentDetails;
+    private javax.swing.JPanel panel_main;
+    private javax.swing.JScrollPane scrollPane_assignmentField;
+    private javax.swing.JTextArea textArea_assignmentField;
     // End of variables declaration//GEN-END:variables
 }
