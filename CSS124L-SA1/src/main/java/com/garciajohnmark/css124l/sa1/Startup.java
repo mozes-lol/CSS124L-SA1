@@ -3,14 +3,13 @@
  */
 
 package com.garciajohnmark.css124l.sa1;
-
 /**
  *
  * @author John Mark Garcia
  */
-public class CSS124LSA1 {
+public class Startup {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        
     }
 }

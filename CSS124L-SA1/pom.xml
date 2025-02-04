@@ -8,6 +8,6 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.release>23</maven.compiler.release>
-        <exec.mainClass>com.garciajohnmark.css124l.sa1.CSS124LSA1</exec.mainClass>
+        <exec.mainClass>com.garciajohnmark.css124l.sa1.Startup</exec.mainClass>
     </properties>
 </project>
