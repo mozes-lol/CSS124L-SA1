@@ -129,6 +129,11 @@ public class Form extends javax.swing.JFrame {
 
         jButton1.setText("Create Assignment");
         jButton1.setEnabled(false);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         jPanel7.add(jButton1, java.awt.BorderLayout.PAGE_START);
 
         jPanel1.add(jPanel7);
@@ -141,7 +146,6 @@ public class Form extends javax.swing.JFrame {
 
         textArea_assignmentField.setColumns(20);
         textArea_assignmentField.setRows(5);
-        textArea_assignmentField.setEnabled(false);
         scrollPane_assignmentField.setViewportView(textArea_assignmentField);
 
         panel_assignmentList.add(scrollPane_assignmentField, java.awt.BorderLayout.CENTER);
@@ -190,6 +194,21 @@ public class Form extends javax.swing.JFrame {
     private void jComboBox1ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBox1ItemStateChanged
         checkInputValidity();
     }//GEN-LAST:event_jComboBox1ItemStateChanged
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        textArea_assignmentField.append(
+                  "Title: " + jTextField1.getText() + "\n"
+                + "Description:\n"
+                + jTextArea2.getText() + "\n"
+                + "Department: " + jComboBox1.getSelectedItem() + "\n"
+                + "Deadline: " + jTextField2.getText() + "\n"
+                + "========================\n"
+        );
+        jTextField1.setText("");
+        jTextArea2.setText("");
+        jComboBox1.setSelectedItem("SELECT A DEPARTMENT");
+        jTextField2.setText("");
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
