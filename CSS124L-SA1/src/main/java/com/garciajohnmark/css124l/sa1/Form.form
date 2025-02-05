@@ -98,6 +98,9 @@
                     <Property name="horizontalAlignment" type="int" value="2"/>
                     <Property name="toolTipText" type="java.lang.String" value=""/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTextFieldKeyReleased"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
@@ -134,6 +137,9 @@
                         <Property name="columns" type="int" value="20"/>
                         <Property name="rows" type="int" value="5"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTextFieldKeyReleased"/>
+                      </Events>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -165,15 +171,19 @@
                     <Component class="javax.swing.JComboBox" name="jComboBox1">
                       <Properties>
                         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                          <StringArray count="5">
-                            <StringItem index="0" value="Human Resources"/>
-                            <StringItem index="1" value="Research and Development"/>
-                            <StringItem index="2" value="Management"/>
-                            <StringItem index="3" value="Designers"/>
-                            <StringItem index="4" value="Information Technology"/>
+                          <StringArray count="6">
+                            <StringItem index="0" value="SELECT A DEPARTMENT"/>
+                            <StringItem index="1" value="Human Resources"/>
+                            <StringItem index="2" value="Research and Development"/>
+                            <StringItem index="3" value="Management"/>
+                            <StringItem index="4" value="Designers"/>
+                            <StringItem index="5" value="Information Technology"/>
                           </StringArray>
                         </Property>
                       </Properties>
+                      <Events>
+                        <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="jComboBox1ItemStateChanged"/>
+                      </Events>
                       <AuxValues>
                         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                       </AuxValues>
@@ -195,6 +205,9 @@
                       <Properties>
                         <Property name="columns" type="int" value="10"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTextFieldKeyReleased"/>
+                      </Events>
                     </Component>
                   </SubComponents>
                 </Container>

@@ -68,6 +68,11 @@ public class Form extends javax.swing.JFrame {
         jTextField1.setColumns(17);
         jTextField1.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         jTextField1.setToolTipText("");
+        jTextField1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTextFieldKeyReleased(evt);
+            }
+        });
         jPanel4.add(jTextField1);
 
         panel_enterAssignmentDetails.add(jPanel4, java.awt.BorderLayout.PAGE_START);
@@ -77,6 +82,11 @@ public class Form extends javax.swing.JFrame {
 
         jTextArea2.setColumns(20);
         jTextArea2.setRows(5);
+        jTextArea2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTextFieldKeyReleased(evt);
+            }
+        });
         jScrollPane2.setViewportView(jTextArea2);
 
         jPanel2.add(jScrollPane2, java.awt.BorderLayout.CENTER);
@@ -90,7 +100,12 @@ public class Form extends javax.swing.JFrame {
         jLabel2.setText("Department");
         jPanel3.add(jLabel2);
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Human Resources", "Research and Development", "Management", "Designers", "Information Technology" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SELECT A DEPARTMENT", "Human Resources", "Research and Development", "Management", "Designers", "Information Technology" }));
+        jComboBox1.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jComboBox1ItemStateChanged(evt);
+            }
+        });
         jPanel3.add(jComboBox1);
 
         jPanel1.add(jPanel3);
@@ -101,6 +116,11 @@ public class Form extends javax.swing.JFrame {
         jPanel5.add(jLabel3);
 
         jTextField2.setColumns(10);
+        jTextField2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTextFieldKeyReleased(evt);
+            }
+        });
         jPanel5.add(jTextField2);
 
         jPanel1.add(jPanel5);
@@ -147,6 +167,29 @@ public class Form extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+    
+    public void checkInputValidity()
+    {
+        // checks if all fields have an entered input
+        if (jTextField1.getText().isBlank() == false &&
+                jTextArea2.getText().isBlank() == false &&
+                jComboBox1.getSelectedItem() != "SELECT A DEPARTMENT" &&
+                jTextField2.getText().isBlank() == false) {
+            jButton1.setEnabled(true);
+            return;
+        } else {
+            jButton1.setEnabled(false);            
+        }
+        
+    }
+    
+    private void jTextFieldKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldKeyReleased
+        checkInputValidity();
+    }//GEN-LAST:event_jTextFieldKeyReleased
+
+    private void jComboBox1ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBox1ItemStateChanged
+        checkInputValidity();
+    }//GEN-LAST:event_jComboBox1ItemStateChanged
 
     /**
      * @param args the command line arguments
